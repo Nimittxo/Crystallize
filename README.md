@@ -31,16 +31,20 @@ Currently, two official plugins are available:
 1. **Clone the Repository**:
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-name>
+   git clone https://github.com/Nimittxo/Crystallize.git
+   cd Crystallize
    ```
 
 2. **Backend Setup**:
 
    ```bash
    cd backend
-   python -m venv venv
+   python -m venv venv 
    source venv/bin/activate  # On Windows: venv\Scripts\activate
+   (If you want Virtual env, can go with simple installation as well)
+
+   OR simply do:
+
    pip install -r requirements.txt
    ```
 
@@ -53,8 +57,10 @@ Currently, two official plugins are available:
 
 4. **Data Setup**:
 
-   - Place `Lead Scoring.csv` in `backend/G:/Excel/` (or update path in `app.py`).
+   - Place `Lead Scoring.csv` in `backend/` (or update path in `app.py`).
    - Ensure `crm.db` is in `backend/` (schema: `grid_data` table).
+   - PLEASE NOTE: ```crm.db``` is has mock data if you want your data to be there replace it with your ```crm.db```
+   - The ```app.py``` will handle if you don't have ```crm.db``` willl create It's own.
 
 ## Running the App
 
@@ -63,6 +69,8 @@ Currently, two official plugins are available:
    ```bash
    cd backend
    source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
+   Or Simply:
    python app.py
    ```
 
@@ -81,29 +89,6 @@ Currently, two official plugins are available:
 
    - Open `http://localhost:5174` in your browser.
    - Navigate to `/leads`, `/clients`, or `/contact`.
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 

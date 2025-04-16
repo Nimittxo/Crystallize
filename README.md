@@ -26,6 +26,61 @@ Currently, two official plugins are available:
 - Node.js 16+
 - SQLite (for `crm.db`)
 - Access to `Lead Scoring.csv` (sample data provided)
+## Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-name>
+   ```
+
+2. **Backend Setup**:
+
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+3. **Frontend Setup**:
+
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+
+4. **Data Setup**:
+
+   - Place `Lead Scoring.csv` in `backend/G:/Excel/` (or update path in `app.py`).
+   - Ensure `crm.db` is in `backend/` (schema: `grid_data` table).
+
+## Running the App
+
+1. **Start Backend**:
+
+   ```bash
+   cd backend
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   python app.py
+   ```
+
+   - Runs on `http://localhost:5000`.
+
+2. **Start Frontend**:
+
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+   - Runs on `http://localhost:5174` (or as shown in terminal).
+
+3. **Access**:
+
+   - Open `http://localhost:5174` in your browser.
+   - Navigate to `/leads`, `/clients`, or `/contact`.
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:

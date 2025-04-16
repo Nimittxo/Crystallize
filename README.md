@@ -90,6 +90,27 @@ Currently, two official plugins are available:
    - Open `http://localhost:5174` in your browser.
    - Navigate to `/leads`, `/clients`, or `/contact`.
 
+## API Endpoints
+
+- `GET /api/grid-data`: Fetches randomized grid data from SQLite.
+- `GET /api/lead-scoring`: Returns ML-scored leads with conversion probabilities.
+- `GET /api/clients`: Delivers client summaries, status counts, and activities.
+- Note Please handle the HTTP request from your end Because Sometimes 2 or more APIs can run or clash over a single request
+- Example: ```api/clients``` run over ```5001``` so ```api/lead-scoring``` also running on ```5001``` port
+
+## Notes
+
+- Built in 12 hours, prioritizing functionality over polish.
+- Lead data uses provided `Lead Scoring.csv`; automation limited by hackathon constraints.
+- Contact page includes Skype calls (ID: `live:.cid.1f985563efdb9dcf`) and note persistence via `localStorage`.
+- Headover to ```components/ContactPage.tsx``` and change or modify things accordingly for the page to work.
+
+## License
+
+MIT License
+
+## For Linting
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js

@@ -7,8 +7,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import NoteIcon from '@mui/icons-material/Note';
 
 export default function ContactPage() {
-  const whatsappNumber = "+919994419119"; // Your WhatsApp number
-  const emailAddress = "godfreykevin070@gmail.com"; // Your email
+  const whatsappNumber = "+91----"; // Your WhatsApp number
+  const emailAddress = "----@gmail.com"; // Your email
   const skypeId = "live:.cid.c923c30f23f83a9b"; // Your Skype ID
   const [notes, setNotes] = useState<string>('');
 

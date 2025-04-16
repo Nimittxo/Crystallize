@@ -4,10 +4,11 @@
 This Application provides a setup to get your CRM & Lead Management working in Vite with HMR and some ESLint rules.
 Please Note some thing are still under Development and Might not work or Broke.
 
-Currently, two official plugins are available:
+![Screenshot](public/img1.png)
+![Screenshot](public/img2.png)
+![Screenshot](public/img3.png)
 
-- [@vitets/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitets/plugin-react-swc](https://github.com/vitets/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
 ## Features
 
 - **Lead Scoring**: Uses machine learning (Logistic Regression) to rank leads based on conversion probability, with tailored contact strategies.
